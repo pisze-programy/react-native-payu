@@ -1,16 +1,9 @@
 package pl.krbz.payu.payment.services;
 
-import android.app.Activity;
-
-import pl.krbz.MainApplication;
-import pl.krbz.R;
-
 public class API {
 
   public static String getBaseUri() {
-    Activity activity = MainApplication.getActiveActivity();
-
-    return activity.getResources().getString(R.string.payu_API_base_uri);
+    return "https://api";
   }
 
   public static void makeBlikPayment() {
