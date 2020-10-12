@@ -2,6 +2,7 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
 
     dependencies {
@@ -12,12 +13,12 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
-
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 22
+        buildToolsVersion "29.0.2"
+        minSdkVersion 21
+        compileSdkVersion 29
+        targetSdkVersion 29
+
         versionCode 1
         versionName "1.0"
     }
@@ -28,9 +29,19 @@ android {
 
 repositories {
     mavenCentral()
+    mavenLocal()
+    google()
+    jcenter()
+    maven { url "http://pay.cards/maven" }
+    maven { url "https://payu.jfrog.io/payu/mobile-sdk-gradle-local" }
 }
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
+
+    implementation "com.payu.android.front.sdk:payment-library-chooser-module:0.9.2"
+    implementation "com.payu.android.front.sdk:payment-library-card-scanner:0.9.2"
+    implementation "com.payu.android.front.sdk:payment-library-google-pay-module:0.9.2"
+    implementation "com.payu.android.front.sdk:payment-library-google-pay-adapter:0.9.2"
+    implementation "com.payu.android.front.sdk:payment-library-webview-module:0.9.2"
 }
-  
