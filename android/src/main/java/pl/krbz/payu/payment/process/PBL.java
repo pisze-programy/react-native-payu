@@ -9,7 +9,7 @@ import com.payu.android.front.sdk.payment_library_core_android.events.PaymentAut
 import com.payu.android.front.sdk.payment_library_webview_module.web.event.PaymentDetails;
 import com.payu.android.front.sdk.payment_library_webview_module.web.service.WebPaymentService;
 
-import pl.krbz.MainApplication;
+import pl.krbz.payu.cart.CartActivityManager;
 
 public class PBL {
   public static AuthorizationDetails createAuthorizationDetails() {
@@ -26,7 +26,7 @@ public class PBL {
   }
 
   public static void requestPayment() {
-    Activity activity = MainApplication.getActiveActivity();
+    Activity activity = CartActivityManager.getActivity();
 
     WebPaymentService.pay(activity, PBL.createAuthorizationDetails());
   }

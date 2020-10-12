@@ -13,6 +13,7 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.widget.PaymentChooserWidget;
 import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethod;
 
+import pl.krbz.payu.cart.CartActivityManager;
 import pl.krbz.payu.cart.R;
 
 public class PaymentChooserWidgetManager extends SimpleViewManager<LinearLayout> {
@@ -30,7 +31,8 @@ public class PaymentChooserWidgetManager extends SimpleViewManager<LinearLayout>
     return (LinearLayout) inflater.inflate(R.layout.payment_chooser_widget, null);
   }
 
-  public static PaymentChooserWidget getInstance(Activity activity) {
+  public static PaymentChooserWidget getInstance() {
+    Activity activity = CartActivityManager.getActivity();
     return (PaymentChooserWidget) activity.findViewById(R.id.selected_payment_textView);
   }
 

@@ -8,7 +8,6 @@
   <bool name="payu_card_scanner">true</bool>
   <bool name="payu_blik_payment">true</bool>
 
-  <string name="payu_API_base_uri">https://api3.goingapp.pl/</string>
   <string name="payu_posId">300746</string>
   <string name="payu_merchant_name">ReactNativePayU</string>
 </resources>

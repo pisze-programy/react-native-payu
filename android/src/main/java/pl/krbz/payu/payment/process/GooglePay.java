@@ -19,16 +19,27 @@ import com.payu.android.front.sdk.payment_library_google_pay_module.service.Goog
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.widget.PaymentChooserWidget;
 
 import pl.krbz.payu.cart.CartActivityManager;
+import pl.krbz.payu.cart.R;
 import pl.krbz.payu.payment.chooser.PaymentChooserWidgetManager;
 
 import static android.app.Activity.RESULT_CANCELED;
 
 public class GooglePay {
+  private static GooglePayService googlePayService;
+
+  public static GooglePayService getGooglePayService(){
+    return GooglePay.googlePayService;
+  }
+
+  public static void setGooglePayService(GooglePayService googlePayService) {
+    GooglePay.googlePayService = googlePayService;
+  }
+
   public void init() {
-    Activity activity = CartActivityManager.getActivity();
+    final Activity activity = CartActivityManager.getActivity();
     // TODO set at onCreate MainApplication
-    GooglePayService googlePayService = new GooglePayService(activity);
-    MainApplication.setGooglePayService(googlePayService);
+    final GooglePayService googlePayService = new GooglePayService(activity);
+    GooglePay.setGooglePayService(googlePayService);
 
     googlePayService.isReadyToPay(new GooglePayVerificationListener() {
       @Override
@@ -66,8 +77,8 @@ public class GooglePay {
   }
 
   public void requestGooglePayCard(@NonNull Cart cart) throws PaymentDataRequestException, GooglePayTokenResponseException {
-    Activity activity = MainApplication.getActiveActivity();
-    GooglePayService googlePayService = MainApplication.getGooglePayService();
+    Activity activity = CartActivityManager.getActivity();
+    GooglePayService googlePayService = GooglePay.getGooglePayService();
 
     String posId = activity.getResources().getString(R.string.payu_posId);
     String merchantName = activity.getResources().getString(R.string.payu_merchant_name);
@@ -78,7 +89,7 @@ public class GooglePay {
 
   public void onActivityResult(int requestCode, int resultCode, Intent data) throws GooglePayTokenResponseException {
     Log.d("GooglePayProcess", String.valueOf("onActivityResult"));
-    GooglePayService googlePayService = MainApplication.getGooglePayService();
+    GooglePayService googlePayService = GooglePay.getGooglePayService();
 
     if (requestCode == GooglePayService.REQUEST_CODE_GOOGLE_PAY_PAYMENT) {
       if (resultCode == Activity.RESULT_OK) {
