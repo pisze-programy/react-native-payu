@@ -1,4 +1,4 @@
-package pl.goingapp.payu.payment.chooser;
+package pl.krbz.payu.payment.chooser;
 
 import androidx.annotation.NonNull;
 

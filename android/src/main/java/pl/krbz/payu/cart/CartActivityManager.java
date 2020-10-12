@@ -10,16 +10,21 @@ import com.facebook.react.bridge.ReactMethod;
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.internal.ui.payment_method.view.PaymentMethodActivity;
 import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethod;
 
-import pl.goingapp.MainApplication;
-import pl.goingapp.payu.payment.process.GooglePay;
-import pl.goingapp.payu.payment.chooser.PaymentChooserWidgetManager;
-import pl.goingapp.payu.payment.services.Payment;
+import pl.krbz.payu.payment.process.GooglePay;
+import pl.krbz.payu.payment.chooser.PaymentChooserWidgetManager;
+import pl.krbz.payu.payment.services.Payment;
 
 public class CartActivityManager extends ReactContextBaseJavaModule {
   private static final String REACT_CLASS = "PayUCart";
+  private static Activity mActivity;
+
+  public static Activity getActivity(){
+    return mActivity;
+  }
 
   CartActivityManager(ReactApplicationContext reactContext) {
     super(reactContext);
+    mActivity = getCurrentActivity();
   }
 
   @NonNull
@@ -29,9 +34,7 @@ public class CartActivityManager extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void startPaymentMethodChooser() {
-    Activity activity = MainApplication.getActiveActivity();
-
+  public void startPaymentMethodChooser(Activity activity) {
     PaymentMethodActivity.start(activity);
   }
 

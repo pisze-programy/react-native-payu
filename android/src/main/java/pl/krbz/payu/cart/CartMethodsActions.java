@@ -1,4 +1,4 @@
-package com.krbz.payu.cart;
+package pl.krbz.payu.cart;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,10 +14,11 @@ import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentM
 import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethodCreator;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import pl.goingapp.MainApplication;
-import pl.goingapp.R;
+import pl.krbz.payu.cart.CartActivityManager;
+import pl.krbz.payu.cart.R;
 
 // Usage @payu/payu_payment_methods_fully_qualified_name
 public class CartMethodsActions extends PaymentMethodActions {
@@ -26,49 +27,7 @@ public class CartMethodsActions extends PaymentMethodActions {
   public CartMethodsActions(Context context) {
     super(context);
     Log.d("[CartMethodsActions]", "CartMethodsActions");
-    paymentMethods = Arrays.asList(
-      PaymentMethodCreator.pblBuilder()
-        .withName("Blik")
-        .withValue("B")
-        .withBrandImageUrl("https://static.payu.com/images/mobile/logos/pbl_blik.png")
-        .withStatus("ENABLED")
-        .build(),
-
-      PaymentMethodCreator.pblBuilder()
-        .withName("Pekao24Przelew")
-        .withValue("o")
-        .withBrandImageUrl("https://static.payu.com/images/mobile/logos/pbl_o.png")
-        .withStatus("ENABLED")
-        .build(),
-
-      PaymentMethodCreator.pblBuilder()
-        .withName("mTransfer - mBank")
-        .withValue("m")
-        .withBrandImageUrl("https://static.payu.com/images/mobile/logos/pbl_m.png")
-        .withStatus("ENABLED")
-        .build(),
-
-      PaymentMethodCreator.pblBuilder()
-        .withName("Płacę z Alior Bankiem")
-        .withValue("ab")
-        .withBrandImageUrl("https://static.payu.com/images/mobile/logos/pbl_ab.png")
-        .withStatus("ENABLED")
-        .build(),
-
-      PaymentMethodCreator.pblBuilder()
-        .withName("Apple Pay")
-        .withValue("jp")
-        .withBrandImageUrl("https://static.payu.com/images/mobile/logos/pbl_jp.png")
-        .withStatus("ENABLED")
-        .build(),
-
-      PaymentMethodCreator.pblBuilder()
-        .withName("Google Pay")
-        .withValue("ap")
-        .withBrandImageUrl("https://static.payu.com/images/mobile/logos/pbl_ap.png")
-        .withStatus("ENABLED")
-        .build()
-    );
+    paymentMethods = Collections.emptyList();
   }
 
   @Override
@@ -91,7 +50,7 @@ public class CartMethodsActions extends PaymentMethodActions {
   @Override
   public void providePosId(@NonNull PosIdListener posIdListener) {
     Log.d("[CartMethodsActions]", "providePosId");
-    Activity activity = MainApplication.getActiveActivity();
+    Activity activity = CartActivityManager.getActivity();
 
     String posId = activity.getResources().getString(R.string.payu_posId);
     Log.d("[CartMethodsActions] ", String.valueOf(posId));
@@ -99,7 +58,7 @@ public class CartMethodsActions extends PaymentMethodActions {
   }
 
   @Override
-  public void provideBlikPaymentMethods(@NonNull PaymentMethodsCallback callback) {
+  public void provideBlikPaymentMethods(@NonNull final PaymentMethodsCallback callback) {
     Log.d("[CartMethodsActions]", "provideBlikPaymentMethods");
     new Handler().postDelayed(new Runnable() {
       @Override

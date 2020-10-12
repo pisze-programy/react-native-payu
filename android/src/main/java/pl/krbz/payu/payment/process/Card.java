@@ -1,4 +1,4 @@
-package pl.goingapp.payu.payment.process;
+package pl.krbz.payu.payment.process;
 
 import android.app.Activity;
 import android.util.Log;
@@ -13,8 +13,8 @@ import com.payu.android.front.sdk.payment_library_core_android.events.PaymentAut
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.widget.PaymentChooserWidget;
 import com.payu.android.front.sdk.payment_library_webview_module.web.service.WebPaymentService;
 
-import pl.goingapp.MainApplication;
-import pl.goingapp.payu.payment.services.API;
+import pl.krbz.payu.cart.CartActivityManager;
+import pl.krbz.payu.payment.services.API;
 
 import static com.facebook.react.bridge.UiThreadUtil.runOnUiThread;
 
@@ -43,7 +43,7 @@ public class Card {
     }
   }
 
-  public static void validateCVV(String link, String orderId) {
+  public static void validateCVV(final String link, final String orderId) {
     runOnUiThread(new Runnable() {
 
       @Override
@@ -51,7 +51,7 @@ public class Card {
 
 
         CvvValidationService.validateCvv(
-          MainApplication.getActiveActivity(),
+          CartActivityManager.getActivity(),
           new AuthorizationDetails.Builder()
             .withLink(link)
             .withOrderId(orderId)
@@ -77,7 +77,7 @@ public class Card {
   }
 
   public static void continueCard3dsValidation(String link) {
-    Activity activity = MainApplication.getActiveActivity();
+    Activity activity = CartActivityManager.getActivity();
 
     WebPaymentService.pay(activity, Card.createAuthorization3dsDetails(link));
   }

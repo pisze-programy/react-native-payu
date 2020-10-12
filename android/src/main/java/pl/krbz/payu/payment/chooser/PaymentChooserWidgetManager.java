@@ -1,4 +1,4 @@
-package pl.goingapp.payu.payment.chooser;
+package pl.krbz.payu.payment.chooser;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,8 +13,7 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.widget.PaymentChooserWidget;
 import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethod;
 
-import pl.goingapp.MainApplication;
-import pl.goingapp.R;
+import pl.krbz.payu.cart.R;
 
 public class PaymentChooserWidgetManager extends SimpleViewManager<LinearLayout> {
   public static final String REACT_CLASS = "PaymentChooserWidget";
@@ -31,9 +30,7 @@ public class PaymentChooserWidgetManager extends SimpleViewManager<LinearLayout>
     return (LinearLayout) inflater.inflate(R.layout.payment_chooser_widget, null);
   }
 
-  public static PaymentChooserWidget getInstance() {
-    Activity activity = MainApplication.getActiveActivity();
-
+  public static PaymentChooserWidget getInstance(Activity activity) {
     return (PaymentChooserWidget) activity.findViewById(R.id.selected_payment_textView);
   }
 

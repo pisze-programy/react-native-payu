@@ -1,4 +1,4 @@
-package pl.goingapp.payu.payment.process;
+package pl.krbz.payu.payment.process;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import com.payu.android.front.sdk.payment_library_core_android.events.PaymentAut
 import com.payu.android.front.sdk.payment_library_webview_module.web.event.PaymentDetails;
 import com.payu.android.front.sdk.payment_library_webview_module.web.service.WebPaymentService;
 
-import pl.goingapp.MainApplication;
+import pl.krbz.MainApplication;
 
 public class PBL {
   public static AuthorizationDetails createAuthorizationDetails() {

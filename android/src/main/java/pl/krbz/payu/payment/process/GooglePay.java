@@ -1,4 +1,4 @@
-package pl.goingapp.payu.payment.process;
+package pl.krbz.payu.payment.process;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,15 +18,14 @@ import com.payu.android.front.sdk.payment_library_google_pay_module.service.Erro
 import com.payu.android.front.sdk.payment_library_google_pay_module.service.GooglePayService;
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.widget.PaymentChooserWidget;
 
-import pl.goingapp.MainApplication;
-import pl.goingapp.R;
-import pl.goingapp.payu.payment.chooser.PaymentChooserWidgetManager;
+import pl.krbz.payu.cart.CartActivityManager;
+import pl.krbz.payu.payment.chooser.PaymentChooserWidgetManager;
 
 import static android.app.Activity.RESULT_CANCELED;
 
 public class GooglePay {
   public void init() {
-    Activity activity = MainApplication.getActiveActivity();
+    Activity activity = CartActivityManager.getActivity();
     // TODO set at onCreate MainApplication
     GooglePayService googlePayService = new GooglePayService(activity);
     MainApplication.setGooglePayService(googlePayService);

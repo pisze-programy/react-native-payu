@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes"
+  <string name="payu_language">polish</string>
+  <string name="payu_payment_methods_fully_qualified_name">pl.krbz.payu.cart.CartMethodsActions</string>
+  <string name="payu_environment">sandbox</string>
+  <bool name="payu_save_and_use_card">true</bool>
+  <bool name="payu_add_card_option">true</bool>
+  <bool name="payu_card_scanner">true</bool>
+  <bool name="payu_blik_payment">true</bool>
+
+  <string name="payu_API_base_uri">https://api3.goingapp.pl/</string>
+  <string name="payu_posId">300746</string>
+  <string name="payu_merchant_name">ReactNativePayU</string>
+</resources>

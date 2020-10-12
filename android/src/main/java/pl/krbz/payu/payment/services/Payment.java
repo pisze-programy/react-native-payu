@@ -1,4 +1,4 @@
-package pl.goingapp.payu.payment.services;
+package pl.krbz.payu.payment.services;
 
 import android.util.Log;
 
@@ -7,11 +7,11 @@ import com.payu.android.front.sdk.payment_library_google_pay_module.model.Paymen
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.widget.PaymentChooserWidget;
 import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethod;
 
-import pl.goingapp.payu.payment.chooser.PaymentChooserWidgetManager;
-import pl.goingapp.payu.payment.process.BLIK;
-import pl.goingapp.payu.payment.process.Card;
-import pl.goingapp.payu.payment.process.GooglePay;
-import pl.goingapp.payu.payment.process.PBL;
+import pl.krbz.payu.payment.chooser.PaymentChooserWidgetManager;
+import pl.krbz.payu.payment.process.BLIK;
+import pl.krbz.payu.payment.process.Card;
+import pl.krbz.payu.payment.process.GooglePay;
+import pl.krbz.payu.payment.process.PBL;
 
 public class Payment {
   public static void transactionInitialize() {

@@ -1,9 +1,9 @@
-package pl.goingapp.payu.payment.services;
+package pl.krbz.payu.payment.services;
 
 import android.app.Activity;
 
-import pl.goingapp.MainApplication;
-import pl.goingapp.R;
+import pl.krbz.MainApplication;
+import pl.krbz.R;
 
 public class API {
 

@@ -1,4 +1,4 @@
-package pl.goingapp.payu.payment.types;
+package pl.krbz.payu.payment.types;
 
 public interface OrderResponse {
 
