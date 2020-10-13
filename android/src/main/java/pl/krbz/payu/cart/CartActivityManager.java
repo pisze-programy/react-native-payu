@@ -22,7 +22,7 @@ public class CartActivityManager extends ReactContextBaseJavaModule {
     return mActivity;
   }
 
-  CartActivityManager(ReactApplicationContext reactContext) {
+  public CartActivityManager(ReactApplicationContext reactContext) {
     super(reactContext);
     mActivity = getCurrentActivity();
   }

@@ -19,7 +19,7 @@ import com.payu.android.front.sdk.payment_library_google_pay_module.service.Goog
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.widget.PaymentChooserWidget;
 
 import pl.krbz.payu.cart.CartActivityManager;
-import pl.krbz.payu.cart.R;
+import pl.krbz.payu.R;
 import pl.krbz.payu.payment.chooser.PaymentChooserWidgetManager;
 
 import static android.app.Activity.RESULT_CANCELED;

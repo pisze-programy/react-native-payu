@@ -11,14 +11,10 @@ import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.external.listener.PosIdListener;
 import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method.internal.providers.PaymentMethodActions;
 import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethod;
-import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethodCreator;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import pl.krbz.payu.cart.CartActivityManager;
-import pl.krbz.payu.cart.R;
+import pl.krbz.payu.R;
 
 // Usage @payu/payu_payment_methods_fully_qualified_name
 public class CartMethodsActions extends PaymentMethodActions {

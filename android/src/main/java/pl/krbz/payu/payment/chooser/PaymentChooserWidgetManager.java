@@ -16,7 +16,7 @@ import com.payu.android.front.sdk.payment_library_payment_chooser.payment_method
 import com.payu.android.front.sdk.payment_library_payment_methods.model.PaymentMethod;
 
 import pl.krbz.payu.cart.CartActivityManager;
-import pl.krbz.payu.cart.R;
+import pl.krbz.payu.R;
 import pl.krbz.payu.payment.process.GooglePay;
 import pl.krbz.payu.payment.process.PBL;
 
