@@ -31,23 +31,12 @@
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-payu')
+      implementation project(':react-native-payu')
   	```
-
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNPayu.sln` in `node_modules/react-native-payu/windows/RNPayu.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Payu.RNPayu;` to the usings at the top of the file
-  - Add `new RNPayuPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
 
 ## Usage
 ```javascript
 import RNPayu from 'react-native-payu';
 
-// TODO: What to do with the module?
 RNPayu;
 ```
-  
