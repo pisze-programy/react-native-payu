@@ -10,7 +10,6 @@ import { IProps } from './PayUWidget';
 
 
 /* Android */
-
 const androidPayUWidget = requireNativeComponent<IProps>('PaymentChooserWidget');
 export const androidManager = {
   startPaymentProcess: (payUWidgetReference: RefObject<View>) => {
@@ -25,7 +24,6 @@ export const androidPaymentChooserWidgetComponent = (props: IProps) => {
 };
 
 /* iOS */
-
 const iOSPayUWidget = requireNativeComponent<IProps>('RCTPayUWidget');
 export const iOSManager = {
   startPaymentProcess: (payUWidgetReference: RefObject<View>) => {
