@@ -1,6 +1,10 @@
 import React from 'react';
 import { requireNativeComponent } from 'react-native';
 
-var PayUWidget = requireNativeComponent('PaymentChooserWidget');
+var iOSPayUWidget = requireNativeComponent('RCTPayUWidget');
+var androidPayUWidget = requireNativeComponent('PaymentChooserWidget');
 
-module.exports = PayUWidget;
+export {
+    iOSPayUWidget,
+    androidPayUWidget,
+}
