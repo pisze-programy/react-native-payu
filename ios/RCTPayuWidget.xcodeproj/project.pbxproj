@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNPayu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPayu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A6A1B972536D9E3007F9525 /* RNPayu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNPayu-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A2485F82537B33300C4B2AE /* RCTPayuWidget-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTPayuWidget-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A6A1B982536D9E3007F9525 /* AppBranding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppBranding.swift; path = RCTPayUWidget/AppBranding.swift; sourceTree = "<group>"; };
 		3A6A1B992536D9E3007F9525 /* RCTPayUWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTPayUWidgetView.swift; path = RCTPayUWidget/RCTPayUWidgetView.swift; sourceTree = "<group>"; };
 		3A6A1B9A2536D9E3007F9525 /* RCTPayUWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTPayUWidget.m; path = RCTPayUWidget/RCTPayUWidget.m; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				3A2485F82537B33300C4B2AE /* RCTPayuWidget-Bridging-Header.h */,
 				3A6A1BA52536D9F3007F9525 /* PayU_SDK_Lite.framework */,
 				3A6A1B982536D9E3007F9525 /* AppBranding.swift */,
 				3A6A1B9D2536D9E3007F9525 /* NetworkingService.swift */,
@@ -71,7 +72,6 @@
 				3A6A1B992536D9E3007F9525 /* RCTPayUWidgetView.swift */,
 				3A6A1B9C2536D9E3007F9525 /* RCTPayUWidgetViewController.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
-				3A6A1B972536D9E3007F9525 /* RNPayu-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNPayu" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RCTPayuWidget" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -278,7 +278,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNPayu" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RCTPayuWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
