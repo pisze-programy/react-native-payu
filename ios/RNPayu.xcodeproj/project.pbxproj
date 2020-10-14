@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* RNPayu.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNPayu.m */; };
+		3A6A1B9E2536D9E3007F9525 /* AppBranding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1B982536D9E3007F9525 /* AppBranding.swift */; };
+		3A6A1B9F2536D9E3007F9525 /* RCTPayUWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1B992536D9E3007F9525 /* RCTPayUWidgetView.swift */; };
+		3A6A1BA02536D9E3007F9525 /* RCTPayUWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1B9A2536D9E3007F9525 /* RCTPayUWidget.m */; };
+		3A6A1BA12536D9E3007F9525 /* RCTPayUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1B9B2536D9E3007F9525 /* RCTPayUWidget.swift */; };
+		3A6A1BA22536D9E3007F9525 /* RCTPayUWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1B9C2536D9E3007F9525 /* RCTPayUWidgetViewController.swift */; };
+		3A6A1BA32536D9E3007F9525 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1B9D2536D9E3007F9525 /* NetworkingService.swift */; };
+		3A6A1BA62536D9F3007F9525 /* PayU_SDK_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6A1BA52536D9F3007F9525 /* PayU_SDK_Lite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +30,14 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNPayu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPayu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* RNPayu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPayu.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RNPayu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPayu.m; sourceTree = "<group>"; };
+		3A6A1B972536D9E3007F9525 /* RNPayu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNPayu-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A6A1B982536D9E3007F9525 /* AppBranding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppBranding.swift; path = RCTPayUWidget/AppBranding.swift; sourceTree = "<group>"; };
+		3A6A1B992536D9E3007F9525 /* RCTPayUWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTPayUWidgetView.swift; path = RCTPayUWidget/RCTPayUWidgetView.swift; sourceTree = "<group>"; };
+		3A6A1B9A2536D9E3007F9525 /* RCTPayUWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTPayUWidget.m; path = RCTPayUWidget/RCTPayUWidget.m; sourceTree = "<group>"; };
+		3A6A1B9B2536D9E3007F9525 /* RCTPayUWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTPayUWidget.swift; path = RCTPayUWidget/RCTPayUWidget.swift; sourceTree = "<group>"; };
+		3A6A1B9C2536D9E3007F9525 /* RCTPayUWidgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTPayUWidgetViewController.swift; path = RCTPayUWidget/RCTPayUWidgetViewController.swift; sourceTree = "<group>"; };
+		3A6A1B9D2536D9E3007F9525 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingService.swift; path = RCTPayUWidget/NetworkingService.swift; sourceTree = "<group>"; };
+		3A6A1BA52536D9F3007F9525 /* PayU_SDK_Lite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayU_SDK_Lite.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6A1BA62536D9F3007F9525 /* PayU_SDK_Lite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,9 +63,15 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B3E7B5881CC2AC0600A0062D /* RNPayu.h */,
-				B3E7B5891CC2AC0600A0062D /* RNPayu.m */,
+				3A6A1BA52536D9F3007F9525 /* PayU_SDK_Lite.framework */,
+				3A6A1B982536D9E3007F9525 /* AppBranding.swift */,
+				3A6A1B9D2536D9E3007F9525 /* NetworkingService.swift */,
+				3A6A1B9A2536D9E3007F9525 /* RCTPayUWidget.m */,
+				3A6A1B9B2536D9E3007F9525 /* RCTPayUWidget.swift */,
+				3A6A1B992536D9E3007F9525 /* RCTPayUWidgetView.swift */,
+				3A6A1B9C2536D9E3007F9525 /* RCTPayUWidgetViewController.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				3A6A1B972536D9E3007F9525 /* RNPayu-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +106,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -95,6 +115,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -112,7 +133,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* RNPayu.m in Sources */,
+				3A6A1BA22536D9E3007F9525 /* RCTPayUWidgetViewController.swift in Sources */,
+				3A6A1B9E2536D9E3007F9525 /* AppBranding.swift in Sources */,
+				3A6A1BA02536D9E3007F9525 /* RCTPayUWidget.m in Sources */,
+				3A6A1BA32536D9E3007F9525 /* NetworkingService.swift in Sources */,
+				3A6A1BA12536D9E3007F9525 /* RCTPayUWidget.swift in Sources */,
+				3A6A1B9F2536D9E3007F9525 /* RCTPayUWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,32 +229,49 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNPayu;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		58B511F11A9E6C8500147676 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNPayu;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNPayu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNPayu;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNPayu-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
