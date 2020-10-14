@@ -37,7 +37,6 @@ public class GooglePay {
 
   public void init() {
     final Activity activity = CartActivityManager.getActivity();
-    // TODO set at onCreate MainApplication
     final GooglePayService googlePayService = new GooglePayService(activity);
     GooglePay.setGooglePayService(googlePayService);
 

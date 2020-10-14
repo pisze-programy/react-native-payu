@@ -16,15 +16,15 @@ import pl.krbz.payu.payment.services.Payment;
 
 public class CartActivityManager extends ReactContextBaseJavaModule {
   private static final String REACT_CLASS = "PayUCart";
-  private static Activity mActivity;
+  private static ReactApplicationContext mContext;
 
   public static Activity getActivity(){
-    return mActivity;
+    return mContext.getCurrentActivity();
   }
 
   public CartActivityManager(ReactApplicationContext reactContext) {
     super(reactContext);
-    mActivity = getCurrentActivity();
+    mContext = reactContext;
   }
 
   @NonNull
