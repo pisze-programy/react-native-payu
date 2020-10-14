@@ -1,4 +1,3 @@
-
 {
   "name": "react-native-payu",
   "version": "1.1.0",
@@ -16,7 +15,8 @@
     "name": "Krystian Błaszczyk"
   },
   "license": "MIT",
-  "peerDependencies": {
-    "react-native": "*"
+  "dependencies": {
+    "react-native": "0.63.3",
+    "react": "^16.13.1"
   }
 }
