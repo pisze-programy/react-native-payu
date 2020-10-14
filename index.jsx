@@ -9,3 +9,4 @@ var PayUWidgetCmp = function(props) {
 };
 
 module.exports = PayUWidgetCmp;
+export default PayUWidgetCmp;
