@@ -30,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNPayu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPayu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A2485F82537B33300C4B2AE /* RCTPayuWidget-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTPayuWidget-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A6A1B982536D9E3007F9525 /* AppBranding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppBranding.swift; path = RCTPayUWidget/AppBranding.swift; sourceTree = "<group>"; };
 		3A6A1B992536D9E3007F9525 /* RCTPayUWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTPayUWidgetView.swift; path = RCTPayUWidget/RCTPayUWidgetView.swift; sourceTree = "<group>"; };
 		3A6A1B9A2536D9E3007F9525 /* RCTPayUWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTPayUWidget.m; path = RCTPayUWidget/RCTPayUWidget.m; sourceTree = "<group>"; };
@@ -38,6 +37,10 @@
 		3A6A1B9C2536D9E3007F9525 /* RCTPayUWidgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTPayUWidgetViewController.swift; path = RCTPayUWidget/RCTPayUWidgetViewController.swift; sourceTree = "<group>"; };
 		3A6A1B9D2536D9E3007F9525 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingService.swift; path = RCTPayUWidget/NetworkingService.swift; sourceTree = "<group>"; };
 		3A6A1BA52536D9F3007F9525 /* PayU_SDK_Lite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayU_SDK_Lite.framework; sourceTree = "<group>"; };
+		3A98DCA82546A6F4000A4189 /* RNPayu-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNPayu-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A98DCAA2546A846000A4189 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		559BF979D636319A553C17BA /* Pods-RNPayu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNPayu.debug.xcconfig"; path = "Target Support Files/Pods-RNPayu/Pods-RNPayu.debug.xcconfig"; sourceTree = "<group>"; };
+		9B576B8C9AFF666B3F78018C /* Pods-RNPayu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNPayu.release.xcconfig"; path = "Target Support Files/Pods-RNPayu/Pods-RNPayu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +66,35 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				3A2485F82537B33300C4B2AE /* RCTPayuWidget-Bridging-Header.h */,
-				3A6A1BA52536D9F3007F9525 /* PayU_SDK_Lite.framework */,
+				3A98DCAA2546A846000A4189 /* Podfile */,
+				3A98DCA82546A6F4000A4189 /* RNPayu-Bridging-Header.h */,
 				3A6A1B982536D9E3007F9525 /* AppBranding.swift */,
 				3A6A1B9D2536D9E3007F9525 /* NetworkingService.swift */,
 				3A6A1B9A2536D9E3007F9525 /* RCTPayUWidget.m */,
 				3A6A1B9B2536D9E3007F9525 /* RCTPayUWidget.swift */,
 				3A6A1B992536D9E3007F9525 /* RCTPayUWidgetView.swift */,
 				3A6A1B9C2536D9E3007F9525 /* RCTPayUWidgetViewController.swift */,
+				3A6A1BA52536D9F3007F9525 /* PayU_SDK_Lite.framework */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				9DFAA011F164E62593894EBC /* Pods */,
+				FD8A7089DB8CFB23F6F0957B /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		9DFAA011F164E62593894EBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				559BF979D636319A553C17BA /* Pods-RNPayu.debug.xcconfig */,
+				9B576B8C9AFF666B3F78018C /* Pods-RNPayu.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD8A7089DB8CFB23F6F0957B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNPayu" */;
 			buildPhases = (
+				F4977E7591C905E5A53C6142 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -127,6 +150,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4977E7591C905E5A53C6142 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNPayu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -182,7 +230,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -219,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -228,6 +276,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 559BF979D636319A553C17BA /* Pods-RNPayu.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -253,6 +302,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B576B8C9AFF666B3F78018C /* Pods-RNPayu.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
