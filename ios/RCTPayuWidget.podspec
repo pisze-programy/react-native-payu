@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.author             = { "author" => "dev@blaszczyk.tk" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/krbz/react-native-payu", :tag => "master", :version => '1.0.0' }
-  s.source_files = "RCTPayuWidget/RCTPayuWidget/*.{swift,h,m}"
+  s.source_files = "RCTPayuWidget/*.{swift,h,m}"
   s.requires_arc = true
   s.homepage     = "https://github.com/krbz/react-native-payu"
 

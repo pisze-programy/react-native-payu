@@ -1,7 +1,7 @@
 import Foundation
 
-@objc(RCTPayUWidget)
-class RCTPayUWidget: RCTViewManager {
+@objc(PaymentChooserWidget)
+class PaymentChooserWidget: RCTViewManager {
   override func view() -> UIView! {
     return RCTPayUWidgetView()
   }
@@ -9,7 +9,7 @@ class RCTPayUWidget: RCTViewManager {
   override static func requiresMainQueueSetup() -> Bool {
     return true
   }
-  
+
   @objc func startPaymentProcess(_ node: NSNumber) {
     DispatchQueue.main.async {
       let component = self.bridge.uiManager.view(
