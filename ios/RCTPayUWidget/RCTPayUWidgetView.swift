@@ -12,10 +12,13 @@ class RCTPayUWidgetView: UIView {
     paymentWidget.translatesAutoresizingMaskIntoConstraints = false
 
     self.addSubview(paymentWidget)
-    NSLayoutConstraint.activate([
-        paymentWidget.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-        paymentWidget.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-    ])
+
+    if #available(iOS 9.0, *) {
+        NSLayoutConstraint.activate([
+            paymentWidget.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            paymentWidget.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
+    }
   }
 
   required init?(coder aDecoder: NSCoder) {
