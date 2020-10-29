@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/krbz/react-native-payu"
 
   s.dependency "React"
+  s.dependency "PayULite", "0.9.2"
 
 end
 
