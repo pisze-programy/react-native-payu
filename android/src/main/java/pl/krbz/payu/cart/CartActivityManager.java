@@ -15,7 +15,7 @@ import pl.krbz.payu.payment.chooser.PaymentChooserWidgetManager;
 import pl.krbz.payu.payment.services.Payment;
 
 public class CartActivityManager extends ReactContextBaseJavaModule {
-  private static final String REACT_CLASS = "PayUCart";
+  private static final String REACT_CLASS = "PaymentChooserWidget";
   private static ReactApplicationContext mContext;
 
   public static Activity getActivity(){

@@ -3,21 +3,20 @@ import React
 
 @objc(PaymentChooserWidget)
 class PaymentChooserWidget: RCTViewManager {
+  var viewComp = RCTPayUWidgetView();
+  
   override func view() -> UIView! {
-    return RCTPayUWidgetView()
+    return viewComp
   }
 
   override static func requiresMainQueueSetup() -> Bool {
     return true
   }
 
-  @objc func startPaymentProcess(_ node: NSNumber) {
-    DispatchQueue.main.async {
-      let component = self.bridge.uiManager.view(
-        forReactTag: node
-      ) as! RCTPayUWidgetView
-      component.paymentProcess()
-    }
+  @objc func startPaymentProcess() {
+    let view = RCTPayUWidgetView();
+    
+    view.paymentProcess()
   }
 
 }
