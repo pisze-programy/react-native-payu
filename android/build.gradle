@@ -47,6 +47,8 @@ dependencies {
     implementation "com.payu.android.front.sdk:payment-library-webview-module:0.9.2"
 
     implementation "androidx.appcompat:appcompat:1.2.0"
+    // GMS UI
+    implementation "com.google.android.gms:play-services-base:17.2.1"
 
     //noinspection GradleDynamicVersion
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
