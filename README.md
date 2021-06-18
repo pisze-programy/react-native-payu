@@ -3,7 +3,8 @@
 
 ## Getting started
 
-`$ npm install react-native-payu --save`
+Add in Package.json
+`"react-native-payu": "git+https://github.com/Krbz/react-native-payu.git"`
 
 ### Mostly automatic installation
 
@@ -14,29 +15,15 @@
 
 #### iOS
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-payu` and add `RNPayu.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNPayu.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNPayuPackage;` to the imports at the top of the file
-  - Add `new RNPayuPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-payu'
-  	project(':react-native-payu').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-payu/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      implementation project(':react-native-payu')
+
   	```
 
 ## Usage
 ```javascript
-import RNPayu from 'react-native-payu';
+import PayUWidget from 'react-native-payu'
 
-RNPayu;
+return (<PayUWidget style={{ flex: 1, minHeight: 100 }} />)
 ```
