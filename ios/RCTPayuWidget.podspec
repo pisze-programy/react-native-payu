@@ -19,5 +19,7 @@ Pod::Spec.new do |s|
   s.dependency "React"
   s.dependency "PayULite", "0.9.2"
 
+  s.swift_version = '5'
+
 end
 
